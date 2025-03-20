@@ -14,8 +14,18 @@ SELECT * FROM information_schema.query_history
 ORDER BY start_time DESC 
 LIMIT 50;
 
+---------------------------------------------------------------------
+SELECT
+  `review`,
+  `review_date`,
+  `franchiseID`
+FROM
+  `samples`.`bakehouse`.`media_customer_reviews`
+ORDER BY
+  `review_date` DESC
+LIMIT 1
 
-
+---------------------------------------------------------------------
 
 `<shared_catalog_name>.<schema_name>.<table_name>`;
 
