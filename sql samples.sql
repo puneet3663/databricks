@@ -40,3 +40,15 @@ where datetime_valid_local = '2024-07-15T15:00:00.000'
 and city_name = 'hong kong'
 
 PERMISSION_DENIED: User does not have MODIFY on Table 'samples.accuweather.forecast_hourly_metric'.
+
+------------------------------------------------------------------------------
+  
+CREATE OR REPLACE TABLE customers_bronze
+AS
+SELECT *
+FROM read_files(
+        '/Volumes/dbacademy_retail/v01/source_files/customers.csv', 
+        format => 'csv',
+        header => true);
+
+
